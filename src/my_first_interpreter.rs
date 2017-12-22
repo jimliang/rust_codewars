@@ -1,6 +1,3 @@
-fn main() {
-
-}
 
 fn my_first_interpreter(code: &str) -> String {
     let mut result = "".to_string();
