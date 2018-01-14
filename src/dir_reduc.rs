@@ -10,9 +10,8 @@ enum Direction {
 fn dir_reduc(arr: &[Direction]) -> Vec<Direction> {
     let mut result: Vec<Direction> = vec![];
     for a in arr {
-        let r = result.clone();
-        if let Some(_last) = r.last() {
-            if is_opposite(a, _last) {
+        if let Some(_last) = result.last().cloned() {
+            if is_opposite(a, &_last) {
                 result.pop().unwrap();
                 continue;
             }
